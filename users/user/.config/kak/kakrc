@@ -1,0 +1,8 @@
+# Replaces common/.config/kak/kakrc for this account (xdg.configFile merges with
+# //, so a file here wins outright) - everything in the shared one must be kept.
+#
+# Colors: the tetradic scheme sets every face account.kak does, so the old red
+# scheme is not sourced at all. Fall back any time with :colorscheme account.
+source "~/.config/kak/colors/account-tetradic.kak"
+
+map global normal <space> 'i<space><esc>'

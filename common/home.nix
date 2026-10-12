@@ -30,6 +30,8 @@ in
     pavucontrol # waybar volume module, left click
     claude-code
 
+    # Node.js for ponytail
+    nodejs
 
     # foot uses "FiraCode Nerd Font"
     nerd-fonts.fira-code
