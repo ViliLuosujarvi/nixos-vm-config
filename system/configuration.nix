@@ -12,6 +12,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Run aarch64 binaries under qemu, so the raspberry pi 5 sd-image in
+  # ~/nixos-pi5 can be built here instead of on the pi.
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # --- Nix ---
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Unfree packages (burpsuite, claude-code) are only in the home profiles,

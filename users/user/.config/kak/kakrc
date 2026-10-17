@@ -1,8 +1,13 @@
 # Replaces common/.config/kak/kakrc for this account (xdg.configFile merges with
 # //, so a file here wins outright) - everything in the shared one must be kept.
 #
-# Colors: the tetradic scheme sets every face account.kak does, so the old red
-# scheme is not sourced at all. Fall back any time with :colorscheme account.
-source "~/.config/kak/colors/account-tetradic.kak"
+# Colors: the spectrum scheme sets every face account.kak does, so the old red
+# scheme is not sourced at all. The five are interchangeable at runtime:
+#   :colorscheme account-spectrum    five-colour spectrum run, red to cyan (this one)
+#   :colorscheme account-neon        five-colour neon run, purple to orange
+#   :colorscheme account-analogous   blue-based analogous run
+#   :colorscheme account-tetradic    square tetrad rooted at red
+#   :colorscheme account             the original red scheme
+source "~/.config/kak/colors/account-spectrum.kak"
 
 map global normal <space> 'i<space><esc>'

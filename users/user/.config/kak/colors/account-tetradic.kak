@@ -3,6 +3,8 @@
 # Switch to it at runtime with:   :colorscheme account-tetradic
 # (kakrc sources account.kak at startup; this file overrides every face it sets.)
 #
+# check-hues: red=0 lime=90 cyan=180 viol=270
+#
 # Option names are t_-prefixed because account.kak already declared base00..base0F
 # and a second declare-option on the same name aborts the file.
 
