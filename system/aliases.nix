@@ -65,7 +65,7 @@ in
   programs.zsh = {
     # Also sets HISTFILE (~/.zsh_history) and SAVEHIST.
     histSize = 10000;
-    setOptions = [ "APPEND_HISTORY" ];
+    setOptions = [ "APPEND_HISTORY" "INC_APPEND_HISTORY" ];
 
     # compinit is run below instead, with -C: the default one re-checks every
     # completion directory on each shell start. The dump file is named after

@@ -11,7 +11,10 @@ zstyle -e ':completion:*:approximate:*' max-errors \
   'reply=( $(( ($#PREFIX + $#SUFFIX) / 3 > 2 ? 2 : ($#PREFIX + $#SUFFIX) / 3 )) numeric )'
 
 # Case-insensitive: `doc<Tab>` matches Documents, `DOC<Tab>` matches docker.
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# Substring-after-separator: `cad V6<Tab>` matches fully-assembled-V6 (anything
+# can precede a typed chunk, as long as a `.`/`_`/`-` separates it).
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Menu: Tab opens a list you move through with the arrow keys.
 zstyle ':completion:*' menu select
